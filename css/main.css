@@ -436,6 +436,12 @@ body
     {
         font-size:calc(((100vh - 4rem) / 2) / 5);
     }
+
+    /* Nav */
+    #nav-about
+    {
+        display:none;
+    }
 }
 /* Landscape and height < 320px or Portrait and width < 320px */
 @media (orientation:landscape) and (max-height: 319px), (orientation:portrait) and (max-width: 319px)
@@ -452,6 +458,22 @@ body
     .banner3
     {
         flex:0;
+    }
+}
+/* width < 300px or height < 300px */
+@media (max-width: 299px), (max-height: 299px)
+{
+    /* Nav */
+    .nav
+    {
+        display:none;
+    }
+
+    /* Banner */
+    .banner 
+    {
+        height:100vh;
+        margin-top: 0;
     }
 }
 
