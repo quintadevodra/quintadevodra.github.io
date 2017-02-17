@@ -190,7 +190,7 @@ body
 }
 .section-content-footer
 {
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: space-around;
 }
 .section-info-centre
@@ -388,6 +388,10 @@ body
     .section-footer
     {
         flex-flow: column nowrap;
+    }
+    .section-content-footer
+    {
+        flex-flow: row nowrap;
     }
     .map
     {
