@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <title>Quinta de Vodra</title>
+        <link rel="icon" href="./img/house-logo-multi.png">
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Quinta de Vodra">
+        <meta name="keywords" content="Quinta de Vodra">
+
+        <!-- Import webfonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:Light" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="./css/main.css"  />
+        <script src="./js/modernizr-flexbox.js"></script>
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+
+        <!-- Slideshow - images in the page are added in the main.js -->
+        <div class="slideshow no-select"> 
+            <div class="slideshow-slides"></div>
+            <div class="slideshow-prev flex-box" onclick="prevSlide()">&#10094;</div>
+            <div class="slideshow-next flex-box" onclick="nextSlide()">&#10095;</div>
+            <div class="slideshow-close flex-box" onclick="closeSlideShow()">&times;</div>
+        </div>
+
+        <!-- Header -->
+        <div class="nav header flex-box">  
+            <a class="nav-icon" id="home" href="#"><img src="./img/house-logo-white.png" /></a>
+            <a class="nav-link flex-box" href="#about">About</a>
+            <a class="nav-link flex-box" href="#house">Rooms</a>
+            <a class="nav-link flex-box" href="javascript:openSlideShow()">Photos</a>
+        </div>
+
+        <!-- Banner-->
+        <div class="banner flex-box">
+            <div class="banner1 flex-box">
+                <div class="bg-img" style="background-image:url('./img/house.jpg')" title="The main house"></div>
+            </div>
+            <div class="banner2 flex-box">
+                <div class="title flex-box no-select">
+                    <div>QUINTA</div><div>~ de ~</div><div>VODRA</div>
+                </div>
+                <div class="bg-img" style="background-image:url('./img/stream.jpg')" title="Paddling in the stream"></div>
+            </div>
+            <div class="flex-box banner3 flex-box">
+                <div class="bg-img" style="background-image:url('./img/peppers.jpg')" title="Locally grown peppers"></div>
+                <div class="bg-img" style="background-image:url('./img/window.jpg')" title="Two generations of Ferrãos"></div>
+                <div class="bg-img" style="background-image:url('./img/grapes.jpg')" title="Grapes from our vineyard"></div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="nav footer flex-box">  
+            <a class="nav-link flex-box" href="#booking">Booking & Availability</a>
+            <a class="nav-icon flex-box" id="airbnb" href="https://www.airbnb.co.uk/"><img src="./img/airbnb.png" /></a>
+            <a class="nav-icon flex-box" id="facebook" href="https://www.facebook.com/"><img src="./img/facebook.png" /></a>
+        </div>
+
+        <!-- Main content -->
+        <div class="content">
+
+            <!-- About section -->
+            <div id="about">
+                <div class="section flex-box">
+                    <div class="section-content flex-box">
+                        <div class="section-header">The Farm</div>
+                        <div class="section-info flex-box">  
+                            <p>Situated in the countryside 3km north of the town of Seia, with views across the mountains of the <a href="#region">Serra da Estrela</a>, this beautifully restored farmstead has a decidedly homely feel, that will make you not want to leave.</p>
+                            <p>Farmed by the Ferrão family over many generations, the Quinta produces a wide variety of homegrown produce, whilst our small vineyard contributes grapes to the local wine cooperative.</p>
+                            <p>Take a walk around the rambling, shady grounds and you're likely to bump into snoozing cats or our friendly farm dog "Faisca".</p>
+                            <p>Whether you want to relax by the swimming pool or explore the surrounding mountains, this is a place to recharge your batteries and feel at home.</p>
+                        </div>
+                    </div>                        
+                    <div class="section-images flex-box">
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-4-3" style="background-image:url('./img/0H4A8665.jpg')" title="The Farm"></div></div>
+                        </div>
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/IMG_20161226_133325401_HDR.jpg')" title="View towards the mountains"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/produce.jpg')" title="Homegrown produce"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/IMG_20161226_131635884_HDR.jpg')" title="Driveway"></div></div>
+                        </div>
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/0H4A9318.jpg')" title="BBQ"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/0H4A9376.jpg')" title="Faisca the farm dog"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- House section -->
+            <div id="house">
+                <div class="section flex-box">
+                    <div class="section-content flex-box">
+                        <div class="section-header">Main House</div>
+                        <div class="section-info flex-box">                          
+                            <p>Completely renovated in 2016, the main house has 6 double bedrooms, all of which come equipped with TV and ensuite bathroom.</p>
+                            <p>The large dining room boasts an open fire and modern kitchen facilities, providing a relaxing space for eating and socialising.</p>
+                            <p>On warm days you can make use of the purpose built BBQ and eat outdoors by our brand new swimming pool.</p>
+                        </div>   
+                    </div>        
+                    <div class="section-images flex-box">
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-4-3" style="background-image:url('./img/IMG_20161226_132126255_HDR.jpg')" title="The main house"></div></div>
+                        </div>
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/0H4A9509.jpg')" title="1 of 6 bedrooms in the main house"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/0H4A9426.jpg')" title="All bedrooms come with ensuite bathroom"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/0H4A9140.jpg')" title="The dining room"></div></div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+
+            <!-- Celeiro section -->
+            <div id="celeiro">
+                <div class="section flex-box">
+                    <div class="section-content flex-box">
+                        <div class="section-header">Celeiros</div>
+                        <div class="section-info flex-box">
+                            <p>These spacious farm buildings, next to the main house, have been fully modernised without losing their traditional charm.</p>
+                            <p>Both include a TV and bathroom and can sleep up to 4 people (double bed and sofa bed), making them ideal for families with younger children.</p>
+                            <p>You'll also have access to all the facilities in the main house.</p>
+                        </div>                      
+                    </div>
+                    <div class="section-images flex-box">
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-4-3" style="background-image:url('./img/IMG_20161226_131909850_HDR.jpg')" title="Celeiro"></div></div>
+                        </div>
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/0H4A9373.jpg')" title="Celeiro bed"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/0H4A9248.jpg')" title="Celeiro"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/0H4A9356.jpg')" title="Celeiro bathroom"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Region section -->
+            <div id="region">
+                <div class="section flex-box">
+                    <div class="section-content flex-box">
+                        <div class="section-header">Region</div>
+                        <div class="section-info flex-box">
+                            <p>This is an ideal base from which to discover the Serra da Estrela, Portugal's highest mountain range.</p>
+                            <p>With its bizarrely shaped crags and gorges, mountain streams and lakes, beautiful forests and magnificent views, the region is one of Portugal’s most outstanding scenic attractions.</p>
+                            <p>The park is excellent for trekking, horse-riding, and mountain biking with some 375km of marked trails of varying degrees of difficulty.</p> 
+                            <p>In cold weather, Serra da Estrela is the only place in Portugal where you can ski, offering several lift served pistes.</p>
+                            <p>Make sure you try the most famous product in the region - the Serra da Estrela cheese. With its buttery texture, it goes ideally with the traditional local bread.</p>
+                        </div>                      
+                    </div>
+                    <div class="section-images flex-box">
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-4-3" style="background-image:url('./img/3948210705_cbf1640d76_b.jpg')" title="Trekking in the Serra da Estrela"></div></div>
+                        </div>
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/cheese.jpg')" title="The famous Serra da Estrela cheese"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/ski.jpg')" title="Skiing in the Serra da Estrela"></div></div>
+                        </div>
+                        <div class="flex-box">
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/mountains.jpg')" title="Canoeing and swimming in the Serra da Estrela"></div></div>
+                            <div><div class="bg-img ratio-1-1" style="background-image:url('./img/IMG_20161226_170352670.jpg')" title="Artisan Bread"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- Booking section -->
+            <div id="booking">
+                <div class="section section-footer flex-box">
+                    <div class="section-content-footer flex-box">
+                        <div class="section-content flex-box">
+                            <div class="section-header">Booking</div>
+                            <div class="section-info section-info-centre flex-box">
+                                <div>
+                                    <p>Choose between one of 6 rooms in the <a href="#house">main house</a> or a more private space in one of our two <a href="#celeiro">celeiros</a> (farm houses).</p>               
+                                    <p>
+                                        Check our calendar for availability
+                                        <br/><a href="./calendar.html">Calendar</a>
+                                    </p>
+                                    <p>
+                                        For all bookings and enquiries you can email us directly
+                                        <br/><a href="mailto:quintadevodra@gmail.com?subject=Quinta de Vodra Enquiry">quintadevodra@gmail.com</a>
+                                    </p>
+                                    <p>
+                                        Or book through one of our affiliate sites
+                                        <br/><a href="https://www.airbnb.co.uk/">airbnb.co.uk</a>
+                                        <br/><a href="https://www.booking.com/">booking.com</a>
+                                    </p>
+                                </div>
+                            </div>                      
+                        </div>
+                        <div class="section-content flex-box">
+                            <div class="section-header">Contact</div>
+                            <div class="section-info section-info-centre flex-box">
+                                <div>
+                                    <p>Quinta de Vodra<br/>Estrada da Arrifana<br/>6270-554<br/>Seia</p>
+                                    <p><a href="mailto:quintadevodra@gmail.com">quintadevodra@gmail.com</a></p>
+                                </div>
+                            </div>                      
+                        </div>                  
+                    </div>
+                    <div class="map">
+                        <img src="./img/map.jpg" title="location" />
+                    </div>
+                </div>
+            </div>  
+
+        </div>   
+
+    </body>
+</html>
