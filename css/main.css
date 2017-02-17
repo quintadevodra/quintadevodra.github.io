@@ -351,7 +351,11 @@ body
     {
         font-size:9vh;
     }
+}
 
+/* Landscape and width > 999px */
+@media (orientation:landscape) and (min-width: 1000px) 
+{
     /* Section */
     .content > div:nth-child(even) .section-content
     {
@@ -391,7 +395,7 @@ body
     }
 }
 
-/* Cope with very small screens */
+/* Adjust the banner to cope with very small screens */
 
 /* Landscape and height < 320px */
 @media (orientation:landscape) and (max-height: 319px)
