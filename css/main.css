@@ -317,13 +317,6 @@ body
 /* Landscape */
 @media (orientation:landscape)
 {
-    /* Navbar */
-    .nav-link
-    {
-        flex: 0 0 auto;
-        padding: 0 3rem;
-    }
-
     /* Banner */
     .banner
     {
@@ -356,6 +349,13 @@ body
 /* Landscape and width > 999px */
 @media (orientation:landscape) and (min-width: 1000px) 
 {
+    /* Navbar */
+    .nav-link
+    {
+        flex: 0 0 auto;
+        padding: 0 3rem;
+    }
+
     /* Section */
     .content > div:nth-child(even) .section-content
     {
@@ -438,8 +438,6 @@ body
     {
         flex-flow: column nowrap;
     }
-
-    /* Banner Title */
     .title > div 
     {
         font-size:calc(((100vh - 4rem) / 2) / 5);
