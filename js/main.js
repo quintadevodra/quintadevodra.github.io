@@ -51,7 +51,8 @@ function addImagesFromPageToSlideshow()
     var strHtml = '';
     [].forEach.call(document.querySelectorAll('.bg-img'), function(elt, index) 
     {
-        var src = window.getComputedStyle(elt).backgroundImage.slice(5, -2);
+        var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+
         var title = elt.getAttribute('title');
         if (index === 0)
             strHtml += '<div class="slideshow-slide slideshow-slide-active"><div class="slideshow-img flex-box"><img src="'+src+'" /></div><div class="slideshow-text">'+title+'</div></div>';
