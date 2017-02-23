@@ -1,7 +1,7 @@
 // If flexbox css is not supported load the basic page.
 if (!Modernizr.flexbox) 
 {
-    window.location = './index_basic.html';
+    window.location = './basic/index.html';
 } 
 
 // Called when page has loaded.
