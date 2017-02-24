@@ -361,14 +361,6 @@ body
     {
         order: 2;
     }
-    .content > div:nth-child(even) .section-images
-    {
-        margin-right:50px;
-    }
-    .content > div:nth-child(odd) .section-images
-    {
-        margin-left:50px;
-    }
     .section
     {
         flex-flow: row nowrap;
@@ -385,9 +377,13 @@ body
     {
         flex:1;
     }
-    .section-images 
+    .section-content
     {
-        margin:5px;
+        margin:20px;
+    }
+    .section-images
+    {
+        margin:28px;
     }
     .section-images > div > div
     {
