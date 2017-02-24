@@ -361,9 +361,18 @@ body
     {
         order: 2;
     }
+    .content > div:nth-child(even) .section-images
+    {
+        margin-right:25px;
+    }
+    .content > div:nth-child(odd) .section-images
+    {
+        margin-left:25px;
+    }
     .section
     {
         flex-flow: row nowrap;
+        padding: 3rem 30px; 
     }
     .section-header
     {
@@ -377,13 +386,9 @@ body
     {
         flex:1;
     }
-    .section-content
+    .section-images 
     {
-        margin:20px;
-    }
-    .section-images
-    {
-        margin:28px;
+        margin:5px;
     }
     .section-images > div > div
     {
@@ -399,7 +404,7 @@ body
     }
     .map
     {
-        padding:10px;
+        margin:10px;
     }
 }
 
