@@ -185,7 +185,6 @@ body
     flex-flow: column nowrap;
     justify-content:center;
     margin:10px;
-    text-align: justify;
     line-height:1.8rem;
 }
 .section-content-footer
@@ -215,7 +214,7 @@ body
 /* map */
 .map
 {
-    margin:2px;
+    margin:4px;
 }
 .map img
 {
