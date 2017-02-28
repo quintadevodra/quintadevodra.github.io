@@ -1,10 +1,9 @@
+// Check for modern css support.
 if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc && Modernizr.cssvhunit && Modernizr.cssvwunit) 
 {
-    // Modern Flexbox with `flex-wrap` supported.
 }
 else 
 {
-    // Either old Flexbox syntax, or `flex-wrap` not supported.
     window.location = './basic/index.html';
 }
 
