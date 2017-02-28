@@ -58,9 +58,9 @@ function addImagesFromPageToSlideshow()
 
         var title = elt.getAttribute('title');
         if (index === 0)
-            strHtml += '<div class="slideshow-slide slideshow-slide-active"><div class="slideshow-img flex-box"><img src="'+src+'" /></div><div class="slideshow-text">'+title+'</div></div>';
+            strHtml += '<div class="slideshow-slide slideshow-slide-active"><div class="slideshow-img flex-box"><img src="'+src+'" alt="'+title+'" /></div><div class="slideshow-text">'+title+'</div></div>';
         else
-            strHtml += '<div class="slideshow-slide"><div class="slideshow-img flex-box"><img src="'+src+'" /></div><div class="slideshow-text">'+title+'</div></div>';
+            strHtml += '<div class="slideshow-slide"><div class="slideshow-img flex-box"><img src="'+src+'" alt="'+title+'" /></div><div class="slideshow-text">'+title+'</div></div>';
 
         // Add click to open slideshow.
         (function (_src) {
