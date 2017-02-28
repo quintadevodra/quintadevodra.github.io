@@ -187,15 +187,6 @@ body
     margin:10px;
     line-height:1.8rem;
 }
-.section-content-footer
-{
-    flex-flow: column nowrap;
-    justify-content: space-around;
-}
-.section-info-centre
-{   
-    align-items:center;
-}
 
 /* Centered background images */
 .bg-img
@@ -214,12 +205,7 @@ body
 /* map */
 .map
 {
-    margin:4px;
-}
-.map img
-{
-    height: auto;
-    width: 100%;
+    background-size: contain;
 }
 
 /* Slideshow */
@@ -392,18 +378,6 @@ body
     .section-images > div > div
     {
         margin:5px;
-    }
-    .section-footer
-    {
-        flex-flow: column nowrap;
-    }
-    .section-content-footer
-    {
-        flex-flow: row nowrap;
-    }
-    .map
-    {
-        margin:10px;
     }
 }
 
