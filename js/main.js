@@ -1,4 +1,4 @@
-if (Modernizr.flexbox && Modernizr.flexwrap) 
+if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc && Modernizr.cssvhunit && Modernizr.cssvwunit) 
 {
     // Modern Flexbox with `flex-wrap` supported.
 }
