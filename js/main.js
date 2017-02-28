@@ -1,10 +1,12 @@
 // Check for modern css support.
-if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc && Modernizr.cssvhunit && Modernizr.cssvwunit) 
+// cssvhunit not working properly on android so removed.
+//if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc && Modernizr.cssvhunit && Modernizr.cssvwunit) 
+if (Modernizr.flexbox && Modernizr.flexwrap && Modernizr.csscalc) 
 {
 }
 else 
 {
-    window.location = './basic/index.html';
+   window.location = './basic/index.html';
 }
 
 // Called when page has loaded.

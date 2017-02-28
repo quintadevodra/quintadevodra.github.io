@@ -165,7 +165,7 @@ body
 .section-header
 {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:12vw;
+    /*font-size:12vw;*/
     margin:10px;
     text-align:center;
 }
