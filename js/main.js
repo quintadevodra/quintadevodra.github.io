@@ -1,8 +1,12 @@
-// If flexbox css is not supported load the basic page.
-if (!Modernizr.flexbox) 
+if (Modernizr.flexbox && Modernizr.flexwrap) 
 {
+    // Modern Flexbox with `flex-wrap` supported.
+}
+else 
+{
+    // Either old Flexbox syntax, or `flex-wrap` not supported.
     window.location = './basic/index.html';
-} 
+}
 
 // Called when page has loaded.
 window.onload = function () 
