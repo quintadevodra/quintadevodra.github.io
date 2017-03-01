@@ -13,7 +13,7 @@ else
 window.onload = function () 
 { 
     addImagesFromPageToSlideshow();
-} 
+}; 
 
 // Slideshow.
 function openSlideShow(src)
@@ -39,7 +39,7 @@ function nextSlide()
 {
     var slideshow = document.querySelector('.slideshow');
     var activeSlide = slideshow.querySelector('.slideshow-slide-active');
-    var nextSlide = (activeSlide.nextElementSibling != null ? activeSlide.nextElementSibling : activeSlide.parentNode.firstElementChild);
+    var nextSlide = (activeSlide.nextElementSibling !== null ? activeSlide.nextElementSibling : activeSlide.parentNode.firstElementChild);
     addClass(nextSlide, 'slideshow-slide-active');
     removeClass(activeSlide, 'slideshow-slide-active');
 }
@@ -47,7 +47,7 @@ function prevSlide()
 {
     var slideshow = document.querySelector('.slideshow');
     var activeSlide = slideshow.querySelector('.slideshow-slide-active');
-    var prevSlide = (activeSlide.previousElementSibling != null ? activeSlide.previousElementSibling : activeSlide.parentNode.lastElementChild);
+    var prevSlide = (activeSlide.previousElementSibling !== null ? activeSlide.previousElementSibling : activeSlide.parentNode.lastElementChild);
     addClass(prevSlide, 'slideshow-slide-active');
     removeClass(activeSlide, 'slideshow-slide-active');
 }
