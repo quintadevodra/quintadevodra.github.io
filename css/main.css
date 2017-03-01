@@ -147,7 +147,7 @@ body
 }
 
 /* Sections */
-.content > div:nth-child(odd)
+.main > section:nth-child(odd)
 {
     background-color: #f9f9f9;
 }
@@ -164,10 +164,14 @@ body
 }
 .section-header
 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size:12vw;
     margin:10px;
     text-align:center;
+}
+.section-header > h2
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:12vw;
+    font-weight:normal;
 }
 .section-images 
 {
@@ -342,15 +346,15 @@ body
     }
 
     /* Section */
-    .content > div:nth-child(even) .section-content
+    .main > section:nth-child(even) .section-content
     {
         order: 2;
     }
-    .content > div:nth-child(even) .section-images
+    .main > section:nth-child(even) .section-images
     {
         margin-right:25px;
     }
-    .content > div:nth-child(odd) .section-images
+    .main > section:nth-child(odd) .section-images
     {
         margin-left:25px;
     }
