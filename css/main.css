@@ -164,14 +164,10 @@ body
 }
 .section-header
 {
-    margin:10px;
-    text-align:center;
-}
-.section-header > h2
-{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:12vw;
-    font-weight:normal;
+    margin:10px;
+    text-align:center;
 }
 .section-images 
 {
