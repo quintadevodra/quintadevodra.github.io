@@ -18,6 +18,8 @@ window.onload = function ()
 // Slideshow.
 function openSlideShow(src)
 {
+    document.querySelector('.slideshow-next').focus();
+
     addClass(document.body, 'hide-scrollbars');
     var slideshow = document.querySelector('.slideshow');
     if (src !== undefined)
