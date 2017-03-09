@@ -108,42 +108,17 @@ body
 /* Banner */
 .banner
 {
-    margin-top:3rem;
-    flex-flow: column nowrap;
-    height:calc(100vh - 6rem);
-}
-.banner1
-{
-    flex:2;
-}
-.banner1 > div, .banner2, .banner2  > div:nth-child(1), .banner3, .banner3 > div
-{
-    flex:1;
-}
-
-/* Banner Title */
-.title
-{
-    font-family: 'Open Sans Condensed', sans-serif;
-    justify-content:space-around;
+    margin: 0 auto;
+    max-width:500px;
     align-items:center;
+    justify-content: center;
+    height:100vh;
 }
-.title > div
+.banner img
 {
-    font-size:11vw;
-}
-.title > div:nth-child(1) 
-{
-    color:#0083bb;
-}
-.title > div:nth-child(2) 
-{
-    font-style: italic;
-    color:#fcbc3b;
-}
-.title > div:nth-child(3) 
-{
-    color: #e03328;
+    margin:30px;
+    flex:1;
+    max-width:100%;
 }
 
 /* Sections */
@@ -299,38 +274,6 @@ body
 
 /* Responsive Design - Default css styles are portrait first */
 
-/* Landscape */
-@media (orientation:landscape)
-{
-    /* Banner */
-    .banner
-    {
-        flex-flow: row-reverse nowrap;
-    }
-    .banner1, .banner2, .banner3
-    {
-        flex-flow: column nowrap;
-    }
-    .banner2  > div:nth-child(1) 
-    {
-        flex:2;
-    }
-    .banner2  > div:nth-child(2) 
-    {
-        flex:1;
-    }
-
-    /* Banner Title */
-    .title
-    {
-        flex-flow: column nowrap;
-    }
-    .title > div 
-    {
-        font-size:9vh;
-    }
-}
-
 /* Landscape and width > 999px */
 @media (orientation:landscape) and (min-width: 1000px) 
 {
@@ -381,63 +324,13 @@ body
     }
 }
 
-/* Adjust the banner to cope with very small screens */
-
-/* Landscape and height < 320px */
-@media (orientation:landscape) and (max-height: 319px)
+/*  width < 320px */
+@media (max-width: 319px)
 {
-    /* Banner */
-    .banner
-    {
-        flex-flow: row nowrap;
-    }
-
-    /* Banner Title */
-    .title > div 
-    {
-        font-size:calc((100vh - 4rem) / 5);
-    }
-}
-/* Portrait and width < 320px */
-@media (orientation:portrait) and (max-width: 319px)
-{
-    /* Banner */
-    .banner
-    {
-        flex-flow: column nowrap;
-    }
-
-    /* Banner Title */
-    .title
-    {
-        flex-flow: column nowrap;
-    }
-    .title > div 
-    {
-        font-size:calc(((100vh - 4rem) / 2) / 5);
-    }
-
     /* Nav */
     #nav-about
     {
         display:none;
-    }
-}
-/* Landscape and height < 320px or Portrait and width < 320px */
-@media (orientation:landscape) and (max-height: 319px), (orientation:portrait) and (max-width: 319px)
-{
-    /* Banner */
-    .banner1, .banner2
-    {
-        flex:1;
-    }
-    .banner2  > div:nth-child(2) 
-    {
-        flex:0;
-    }
-    .banner3
-    {
-        flex:0;
     }
 }
 /* width < 300px or height < 300px */
@@ -447,13 +340,6 @@ body
     .nav
     {
         display:none;
-    }
-
-    /* Banner */
-    .banner 
-    {
-        height:100vh;
-        margin-top: 0;
     }
 }
 
