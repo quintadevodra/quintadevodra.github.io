@@ -112,7 +112,7 @@ body
 }
 
 /* Banner */
-.banner
+/*.banner
 {
     margin: 0 auto;
     padding:3rem 40px;
@@ -125,6 +125,25 @@ body
 {
     flex:1;
     max-width:100%;
+}*/
+
+.banner
+{
+    margin-top:3rem;
+    flex-flow: column nowrap;
+    height:calc(100vh - 3rem);
+}
+.banner > div
+{
+    align-items:center;
+    justify-content: center;
+    flex:1;
+}
+.banner > div > img
+{
+    flex:1;
+    /*max-width:100%;*/
+    margin:40px;
 }
 
 /* Sections */
@@ -289,6 +308,12 @@ body
     {
         flex: 0 0 auto;
         padding: 0 3rem;
+    }
+
+    /* Banner */
+    .banner
+    {
+        flex-flow: row nowrap;
     }
 
     /* Section */
