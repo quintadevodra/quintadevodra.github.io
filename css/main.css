@@ -112,21 +112,6 @@ body
 }
 
 /* Banner */
-/*.banner
-{
-    margin: 0 auto;
-    padding:3rem 40px;
-    max-width:1000px;
-    align-items:center;
-    justify-content: center;
-    height:100vh;
-}
-.banner img
-{
-    flex:1;
-    max-width:100%;
-}*/
-
 .banner
 {
     margin-top:3rem;
