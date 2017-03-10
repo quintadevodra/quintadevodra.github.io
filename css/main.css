@@ -109,14 +109,14 @@ body
 .banner
 {
     margin: 0 auto;
-    max-width:500px;
+    padding:3rem 30px;
+    max-width:1000px;
     align-items:center;
     justify-content: center;
     height:100vh;
 }
 .banner img
 {
-    margin:30px;
     flex:1;
     max-width:100%;
 }
