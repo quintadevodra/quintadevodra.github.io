@@ -96,6 +96,10 @@ body
     bottom: 0;
     border-top: solid 1px #144733;
 }
+#nav-about
+{
+    display:none;
+}
 
 /* Icon Links */
 #facebook
@@ -327,25 +331,6 @@ body
     }
 }
 
-/*  width < 320px */
-@media (max-width: 319px)
-{
-    /* Nav */
-    #nav-about
-    {
-        display:none;
-    }
-}
-/* width < 300px or height < 300px */
-@media (max-width: 299px), (max-height: 299px)
-{
-    /* Nav */
-    .nav
-    {
-        display:none;
-    }
-}
-
 /* Widths used in chrome dev tools */
 @media all and (max-width: 320px) /* Mobile S - 320px */
 {
@@ -361,7 +346,11 @@ body
 }
 @media all and (min-width: 426px) /* Tablet - 768px */
 {
-
+    /* Nav */
+    #nav-about
+    {
+        display:flex;
+    }
 }
 @media all and (min-width: 769px) /* Laptop - 1024px */
 {
