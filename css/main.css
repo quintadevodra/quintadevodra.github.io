@@ -120,12 +120,14 @@ body
 }
 .banner > div
 {
-    align-items:center;
-    justify-content: center;
     flex:1;
 }
-.banner > div > img
+.banner-logo
 {
+    cursor:pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     flex:1;
     margin:40px;
 }
