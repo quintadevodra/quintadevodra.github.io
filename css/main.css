@@ -113,9 +113,13 @@ body
     flex-flow: column nowrap;
     height:calc(100vh - 3rem);
 }
-.banner > div
+.banner > div:nth-child(1)
 {
     flex:1;
+}
+.banner > div:nth-child(2)
+{
+    flex:1.2;
 }
 .banner-logo
 {
