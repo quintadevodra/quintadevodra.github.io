@@ -145,8 +145,8 @@ body
 .section-header
 {
     color:#144733;
-    font-family: serif;
-    font-size:8vw;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:12vw;
     margin:10px;
     text-align:center;
 }
@@ -321,7 +321,7 @@ body
     }
     .section-header
     {
-        font-size:5vh;
+        font-size:9vh;
     }
     .section-info
     {
