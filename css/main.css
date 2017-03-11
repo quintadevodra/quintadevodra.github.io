@@ -54,14 +54,14 @@ body
     white-space: nowrap;
     justify-content: center;
 }
-.nav-link, .nav-icon
+.nav > *
 {
     justify-content: center;
     align-items:center;
 }
 .nav-link
 {
-    border-right: solid 1px #144733;
+    /*border-right: solid 1px #144733;*/
     text-decoration: none;
     color: rgba(20, 71, 51, 1);
     flex: 1;
@@ -89,14 +89,14 @@ body
 .header
 {
     top: 0;
-    border-bottom: solid 1px #144733;
+    /*border-bottom: solid 1px #144733;*/
 }
 .footer 
 {
     bottom: 0;
     border-top: solid 1px #144733;
 }
-#nav-about
+.nav-about
 {
     display:none;
 }
@@ -124,7 +124,6 @@ body
 }
 .banner-logo
 {
-    cursor:pointer;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -286,6 +285,16 @@ body
 
 /* Responsive Design - Default css styles are portrait first */
 
+/* Landscape */
+@media (orientation:landscape)
+{
+    /* Banner */
+    .banner
+    {
+        flex-flow: row nowrap;
+    }
+}
+
 /* Landscape and width > 999px */
 @media (orientation:landscape) and (min-width: 1000px) 
 {
@@ -294,12 +303,6 @@ body
     {
         flex: 0 0 auto;
         padding: 0 3rem;
-    }
-
-    /* Banner */
-    .banner
-    {
-        flex-flow: row nowrap;
     }
 
     /* Section */
@@ -358,7 +361,7 @@ body
 @media all and (min-width: 426px) /* Tablet - 768px */
 {
     /* Nav */
-    #nav-about
+    .nav-about
     {
         display:flex;
     }
