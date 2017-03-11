@@ -145,8 +145,8 @@ body
 .section-header
 {
     color:#144733;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size:12vw;
+    font-family: 'Cantata One', serif;;
+    font-size:8vw;
     margin:10px;
     text-align:center;
 }
@@ -245,6 +245,7 @@ body
 }
 .slideshow-close, .slideshow-prev, .slideshow-next 
 {
+    outline: none;
     position: absolute;
     top: 0;
     align-items:center;
@@ -320,7 +321,7 @@ body
     }
     .section-header
     {
-        font-size:9vh;
+        font-size:5vh;
     }
     .section-info
     {
