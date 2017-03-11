@@ -77,14 +77,9 @@ body
 }
 .nav-icon img
 {
-    opacity: 0.7;
     flex: 0 0 auto;
     max-width: 100%;
     max-height: 100%;
-}
-.nav-icon:hover img 
-{
-    opacity: 1
 }
 .header
 {
