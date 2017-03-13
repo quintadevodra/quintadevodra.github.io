@@ -398,6 +398,14 @@ body
         flex-flow: row nowrap;
         align-items:stretch;
     }
+    .booking-card
+    {
+        margin:0px;
+    }
+    .booking-card:not(:last-child)
+    {
+        margin-right:40px;
+    }
 }
 
 /* Widths used in chrome dev tools */
