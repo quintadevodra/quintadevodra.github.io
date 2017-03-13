@@ -173,6 +173,50 @@ body
     line-height:1.8rem;
 }
 
+/* Booking cards */
+.booking-cards
+{
+    flex-flow: column nowrap;
+}
+.booking-cards > div
+{
+    flex:1;
+    flex-flow: column nowrap;
+    padding:20px;
+    border: 1px solid #cccccc;
+}
+.booking-cards > div:not(:last-child)
+{
+    margin-bottom:10px;
+}
+.booking-cards  > div > div:first-child
+{
+    text-align:center;
+}
+.booking-cards-price
+{
+    color:#144733;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:3rem;
+    line-height:6rem;
+}
+.book-now
+{
+    flex:1;
+    justify-content:center;
+    align-items:flex-end;
+}
+.book-now-btn
+{
+    text-align:center;
+    color:#fff;
+    background-color: #144733;
+    font-weight:bold;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px; 
+}
+
 /* Centered background images */
 .bg-img
 {
@@ -342,6 +386,18 @@ body
     .section-images > div > div
     {
         margin:5px;
+    }
+
+    /* Price */
+    .booking-cards
+    {
+        flex-flow: row nowrap;
+        align-items:stretch;
+    }
+    .booking-cards > div:not(:last-child)
+    {
+        margin-right:20px;
+        margin-bottom:0px;
     }
 }
 
