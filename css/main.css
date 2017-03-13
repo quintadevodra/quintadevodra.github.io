@@ -183,12 +183,13 @@ body
     flex:1;
     flex-flow: column nowrap;
     padding:20px;
+    margin:15px 20px;
     border: 1px solid #cccccc;
 }
-.booking-cards > div:not(:last-child)
+/*.booking-cards > div:not(:last-child)
 {
     margin-bottom:10px;
-}
+}*/
 .booking-cards  > div > div:first-child
 {
     text-align:center;
@@ -214,7 +215,6 @@ body
     font-weight:bold;
     text-decoration: none;
     padding: 10px;
-    margin-top: 10px; 
 }
 
 /* Centered background images */
@@ -393,11 +393,6 @@ body
     {
         flex-flow: row nowrap;
         align-items:stretch;
-    }
-    .booking-cards > div:not(:last-child)
-    {
-        margin-right:20px;
-        margin-bottom:0px;
     }
 }
 
