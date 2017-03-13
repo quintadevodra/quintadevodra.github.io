@@ -349,6 +349,12 @@ body
         padding: 0 3rem;
     }
 
+    /* Banner image */
+    .banner-img
+    {
+        background-image:url('./img/house_high_res.jpg');
+    }
+
     /* Section */
     .main > section:nth-child(even) .section-content
     {
