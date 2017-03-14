@@ -86,10 +86,13 @@ body
     top: 0;
     /*border-bottom: solid 1px #144733;*/
 }
-.footer 
+.locale 
 {
-    bottom: 0;
-    border-top: solid 1px #144733;
+    justify-content: flex-end;
+    background: rgba(255,255,255,0);
+    position: absolute;
+    z-index: 999;
+    top: 3rem;
 }
 .nav-about
 {
@@ -335,6 +338,10 @@ body
     .banner
     {
         flex-flow: row nowrap;
+    }
+    .banner > div:nth-child(1)
+    {
+        order: 2;
     }
     .banner > div:nth-child(2)
     {
