@@ -398,6 +398,7 @@ body
     }
     .booking-card
     {
+        flex:1;
         margin:0px;
     }
     .booking-card:not(:last-child)
