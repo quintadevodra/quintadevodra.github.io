@@ -339,10 +339,6 @@ body
     {
         flex-flow: row nowrap;
     }
-    .banner > div:nth-child(1)
-    {
-        order: 2;
-    }
     .banner > div:nth-child(2)
     {
         flex:1;
