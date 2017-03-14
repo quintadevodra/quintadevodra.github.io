@@ -84,15 +84,6 @@ body
 .header
 {
     top: 0;
-    /*border-bottom: solid 1px #144733;*/
-}
-.locale 
-{
-    justify-content: flex-end;
-    background: rgba(255,255,255,0);
-    position: absolute;
-    z-index: 999;
-    top: 3rem;
 }
 .nav-about
 {
