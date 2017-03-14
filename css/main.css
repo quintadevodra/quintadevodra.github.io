@@ -193,9 +193,10 @@ body
     background-size: contain;
 }
 
-/* Booking cards */
+/* Booking */
 .booking-cards
 {
+    margin: 20px 0px;
     flex-flow: column nowrap;
 }
 .booking-card
