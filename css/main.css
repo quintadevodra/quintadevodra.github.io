@@ -202,7 +202,7 @@ body
 {
     flex-flow: column nowrap;
     padding:10px;
-    margin:15px 20px;
+    margin:10px;
     border: 1px solid #cccccc;
 }
 .booking-card > div
@@ -389,6 +389,31 @@ body
     {
         margin:5px;
     }
+}
+
+/* Widths used in chrome dev tools */
+@media all and (max-width: 320px) /* Mobile S - 319px and smaller */
+{
+
+}
+@media all and (min-width: 320px) /* Mobile S - 320px and larger */ 
+{
+
+}
+@media all and (min-width: 375px) /* Mobile M - 375px and larger */
+{
+
+}
+@media all and (min-width: 425px)  /* Mobile L - 425px and larger */
+{
+}
+@media all and (min-width: 768px) /* Tablet - 768px and larger */
+{
+    /* Nav */
+    .nav-about
+    {
+        display:flex;
+    }
 
     /* Booking */
     .booking-cards
@@ -403,40 +428,15 @@ body
     }
     .booking-card:not(:last-child)
     {
-        margin-right:40px;
+        margin-right:20px;
     }
-}
 
-/* Widths used in chrome dev tools */
-@media all and (max-width: 320px) /* Mobile S - 320px */
+}
+@media all and (min-width: 1024px) /* Laptop - 1024px and larger */
 {
 
 }
-@media all and (min-width: 321px) /* Mobile M - 375px */
-{
-
-}
-@media all and (min-width: 376px) /* Mobile L - 425px */
-{
-
-}
-@media all and (min-width: 426px) /* Tablet - 768px */
-{
-    /* Nav */
-    .nav-about
-    {
-        display:flex;
-    }
-}
-@media all and (min-width: 769px) /* Laptop - 1024px */
-{
-
-}
-@media all and (min-width: 1025px) /* Laptop L - 1440px  */
-{
-
-}
-@media all and (min-width: 1441px) /* 4k */
+@media all and (min-width: 1440px) /* Laptop L - 1440px and larger  */
 {
 
 }
