@@ -63,11 +63,14 @@ body
 {
     text-decoration: none;
     color: rgba(20, 71, 51, 1);
-    padding: 0 1rem;
 }
 .nav-link:not(:last-child)
 {
     flex: 1;
+}
+.nav-link:last-child
+{
+    padding: 0 1rem;
 }
 .nav-link:hover
 {
