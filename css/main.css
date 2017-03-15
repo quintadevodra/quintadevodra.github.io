@@ -61,9 +61,12 @@ body
 }
 .nav-link
 {
-    /*border-right: solid 1px #144733;*/
     text-decoration: none;
     color: rgba(20, 71, 51, 1);
+    padding: 0 1rem;
+}
+.nav-link:not(:last-child)
+{
     flex: 1;
 }
 .nav-link:hover
