@@ -12,10 +12,16 @@ else
 // Called when page has loaded.
 window.onload = function () 
 { 
-    addImagesFromPageToSlideshow();
+    buildSlideShow();
 }; 
 
 // Slideshow.
+document.onkeydown = function(e) 
+{
+    e = e || window.event;
+    if (e.keyCode == '37')  prevSlide()
+    else if (e.keyCode == '39')  nextSlide();
+}
 function openSlideShow(src)
 {
     document.querySelector('.slideshow-next').focus();
@@ -53,9 +59,10 @@ function prevSlide()
     addClass(prevSlide, 'slideshow-slide-active');
     removeClass(activeSlide, 'slideshow-slide-active');
 }
-function addImagesFromPageToSlideshow()
+function buildSlideShow()
 {
-    var strHtml = '';
+    var strHtml = '<div class="slideshow-slides">';
+
     [].forEach.call(document.querySelectorAll('.bg-img'), function(elt, index) 
     {
         var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
@@ -74,8 +81,16 @@ function addImagesFromPageToSlideshow()
             });
         })(src);
     });
-    var slideshow = document.querySelector('.slideshow');
-    slideshow.querySelector('.slideshow-slides').innerHTML = strHtml;
+
+    strHtml += '</div>'
+    strHtml += '<div class="slideshow-prev flex-box" role="button" tabindex="0" onclick="prevSlide()">&#10094;</div>';
+    strHtml += '<div class="slideshow-next flex-box" role="button" tabindex="0" onclick="nextSlide()">&#10095;</div>';
+    strHtml += '<div class="slideshow-close flex-box" role="button" tabindex="0" onclick="closeSlideShow()">&times;</div>';
+
+    var slideshow = document.createElement('div');
+    addClass(slideshow, 'slideshow no-select')
+    slideshow.innerHTML = strHtml; 
+    document.querySelector('body').appendChild(slideshow);
 }
 
 // Util functions.
