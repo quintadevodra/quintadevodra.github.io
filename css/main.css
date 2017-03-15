@@ -67,7 +67,7 @@ body
 }
 .nav-link:last-child
 {
-    flex:0;
+    flex: 0 0 auto;
     padding: 0 1rem;
 }
 .nav-link:hover
