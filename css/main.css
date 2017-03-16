@@ -351,18 +351,6 @@ body
     }
 
     /* Section */
-    .main > section:nth-child(odd) .section-content
-    {
-        order: 2;
-    }
-    .main > section:nth-child(odd) .section-images
-    {
-        margin-right:25px;
-    }
-    .main > section:nth-child(even) .section-images
-    {
-        margin-left:25px;
-    }
     .section
     {
         flex-flow: row nowrap;
@@ -380,9 +368,17 @@ body
     {
         flex:1;
     }
-    .section-images 
+    .switch .section-content
     {
-        margin:5px;
+        order: 2;
+    }
+    .section-images
+    {
+        margin:5px 5px 5px 25px;
+    }
+    .switch .section-images
+    {
+        margin:5px 25px 5px 5px;
     }
     .section-images > div > div
     {
