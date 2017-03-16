@@ -170,6 +170,10 @@ body
     margin:10px;
     line-height:1.8rem;
 }
+#about .section
+{
+    padding: 1rem 0px 3rem 0px; 
+}
 
 /* Centered background images */
 .bg-img
@@ -388,6 +392,42 @@ body
     {
         margin:5px;
     }
+
+    /* Special rules for first section */
+    #about .section
+    {
+        padding: 1rem 30px 3rem 30px; 
+        flex-flow: column nowrap;
+    }
+    #about .section > div
+    {
+        flex: 1 1 auto; /* Fixes text overflow bug in IE11 */ 
+    }
+    #about .section-images
+    {
+        margin:5px;
+        height:500px;
+        flex-flow: row nowrap;
+    }
+    #about .section-images > div
+    {
+        flex-flow: column nowrap;
+    }
+    #about .section-images > div:nth-child(1)
+    {
+        flex:1;
+    }
+    #about .section-images > div:nth-child(2)
+    {
+        flex:3;
+    }
+    #about .section-images > div:nth-child(3)
+    {
+        flex:1.5;
+    }
+    #about .section-images .ratio-16-9 {padding-bottom:0;height:100%;}
+    #about .section-images .ratio-4-3 {padding-bottom:0;height:100%;}
+    #about .section-images .ratio-1-1 {padding-bottom:0;height:100%;}
 }
 
 /* Widths used in chrome dev tools */
