@@ -12,6 +12,7 @@ else
 // Called when page has loaded.
 window.onload = function () 
 { 
+    console.log("buildSlideShow");
     buildSlideShow();
 }; 
 
@@ -21,6 +22,7 @@ document.onkeydown = function(e)
     e = e || window.event;
     if (e.keyCode == '37')  prevSlide()
     else if (e.keyCode == '39')  nextSlide();
+    else if (e.keyCode == '29')  closeSlideShow();
 }
 function openSlideShow(src)
 {
