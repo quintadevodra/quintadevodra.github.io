@@ -12,7 +12,6 @@ else
 // Called when page has loaded.
 window.onload = function () 
 { 
-    console.log("buildSlideShow");
     buildSlideShow();
 }; 
 
