@@ -22,7 +22,7 @@ document.onkeydown = function(e)
     e = e || window.event;
     if (e.keyCode == '37')  prevSlide()
     else if (e.keyCode == '39')  nextSlide();
-    else if (e.keyCode == '29')  closeSlideShow();
+    else if (e.keyCode == '27')  closeSlideShow();
 }
 function openSlideShow(src)
 {
