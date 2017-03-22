@@ -148,7 +148,7 @@ body
 {
     color:#144733;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:12vw;
+    font-size:3rem;
     margin:10px;
     text-align:center;
 }
@@ -355,10 +355,6 @@ body
     {
         flex-flow: row nowrap;
         padding: 3rem 30px; 
-    }
-    .section-header
-    {
-        font-size:9vh;
     }
     .section-info
     {
