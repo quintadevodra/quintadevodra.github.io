@@ -340,7 +340,7 @@ body
     }
 }
 
-/* Landscape and width > 999px */
+/* Landscape and 1000px and larger */
 @media (orientation:landscape) and (min-width: 1000px) 
 {
     /* Navbar */
@@ -400,6 +400,12 @@ body
 }
 @media all and (min-width: 768px) /* Tablet - 768px and larger */
 {
+    /* Sections */
+    .section-header
+    {
+        font-size:6rem;
+    }
+
     /* Nav */
     .nav-about
     {
