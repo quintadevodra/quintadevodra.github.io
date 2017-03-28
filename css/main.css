@@ -230,10 +230,13 @@ body
 .booking-card-btn
 {
     color:#fff;
-    background-color: #144733;
-    font-weight:bold;
+    background-color: rgba(20,71,51,0.8);
     text-decoration: none;
     padding: 10px;
+}
+.booking-card-btn:hover
+{
+    background-color: rgba(20,71,51,1);
 }
 
 /* Slideshow */
