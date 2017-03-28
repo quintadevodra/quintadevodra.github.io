@@ -394,6 +394,10 @@ body
     {
         margin:3px;
     }
+    .main > section:last-child > .section
+    {
+        padding: 0 30px;
+    }
 }
 
 /* Widths used in chrome dev tools */
