@@ -170,6 +170,10 @@ body
     margin:10px;
     line-height:1.8rem;
 }
+.section:last-child 
+{
+    padding: 0;
+}
 
 /* Centered background images */
 .bg-img
