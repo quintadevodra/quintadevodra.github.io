@@ -237,6 +237,7 @@ body
     background-color: rgba(20,71,51,0.8);
     text-decoration: none;
     padding: 10px;
+    border-radius: 2px;
 }
 .booking-card-btn:hover
 {
