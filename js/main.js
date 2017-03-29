@@ -64,7 +64,7 @@ function buildSlideShow()
 {
     var strHtml = '<div class="slideshow-slides">';
 
-    [].forEach.call(document.querySelectorAll('.bg-img'), function(elt, index) 
+    [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
     {
         var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
 

@@ -178,7 +178,6 @@ body
 /* Centered background images */
 .bg-img
 {
-    cursor:pointer;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -247,8 +246,17 @@ body
 {
     background-color: rgba(20,71,51,1);
 }
+.booking-logos > a
+{
+    flex:0 1 100px;
+    margin:2px;
+}
 
 /* Slideshow */
+.slide
+{
+    cursor:pointer;
+}
 .slideshow 
 {
     visibility: hidden;
