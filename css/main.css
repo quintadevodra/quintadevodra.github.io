@@ -176,11 +176,18 @@ body
     font-size:12px;
     flex-flow: row wrap;
     justify-content:space-between;
+    align-items:center;
 }
 .main > section:last-child > .section
 {
     padding: 0;
 }
+.share-icons > a
+{
+    justify-content: center;
+    align-items:center;
+}
+
 
 /* Centered background images */
 .bg-img
