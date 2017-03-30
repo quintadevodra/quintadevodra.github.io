@@ -170,6 +170,13 @@ body
     margin:10px;
     line-height:1.8rem;
 }
+.section-footer
+{   
+    margin:10px;
+    font-size:12px;
+    flex-flow: row wrap;
+    justify-content:space-between;
+}
 .main > section:last-child > .section
 {
     padding: 0;
