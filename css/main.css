@@ -195,17 +195,16 @@ body
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
+.bg-img-contain
+{
+    background-size: contain;
+}
 
 /* images */
 .ratio-16-9 {padding-bottom:56.25%;}
 .ratio-4-3 {padding-bottom:75%;}
 .ratio-1-1 {padding-bottom:100%;}
 
-/* map */
-.map
-{
-    background-size: contain;
-}
 
 /* Booking */
 .booking-cards
