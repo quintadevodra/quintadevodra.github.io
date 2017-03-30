@@ -174,7 +174,7 @@ body
 {   
     margin:10px;
     font-size:12px;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content:space-between;
     align-items:center;
 }
@@ -433,7 +433,6 @@ body
 }
 @media all and (min-width: 375px) /* Mobile M - 375px and larger */
 {
-
 }
 @media all and (min-width: 425px)  /* Mobile L - 425px and larger */
 {
@@ -468,6 +467,10 @@ body
         margin-right:20px;
     }
 
+    .section-footer
+    {   
+        flex-flow: row nowrap;
+    }
 }
 @media all and (min-width: 1024px) /* Laptop - 1024px and larger */
 {
