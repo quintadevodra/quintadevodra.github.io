@@ -182,23 +182,11 @@ body
     justify-content:center;
     align-items:center;
 }
-.section-footer *
+.share-icon
 {
-    justify-content: center;
-    align-items:center;
+    width:30px;
+    margin:10px;
 }
-.share-icons > a
-{
-    flex:0 0 3rem;
-    padding:0.7rem;
-}
-.share-icons > a img
-{
-    flex: 0 0 auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-
 
 /* Centered background images */
 .bg-img
@@ -271,7 +259,7 @@ body
 {
     background-color: rgba(20,71,51,1);
 }
-.booking-logos > a
+.booking-logo
 {
     flex:0 1 100px;
     margin:2px;
