@@ -175,7 +175,7 @@ body
     margin:10px;
     font-size:12px;
     flex-flow: column nowrap;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
 }
 .main > section:last-child > .section
@@ -467,8 +467,10 @@ body
         margin-right:20px;
     }
 
+    /* Footer */
     .section-footer
     {   
+        justify-content:space-between;
         flex-flow: row nowrap;
     }
 }
