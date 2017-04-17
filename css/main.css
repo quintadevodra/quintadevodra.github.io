@@ -186,6 +186,12 @@ body
 {
     width:30px;
     margin:10px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+.share-icon:hover
+{
+    opacity: 1;
 }
 
 /* Centered background images */
@@ -256,6 +262,7 @@ body
     text-decoration: none;
     padding: 10px;
     border-radius: 2px;
+    transition: background-color 0.3s;
 }
 .booking-card-btn:hover
 {
@@ -265,6 +272,12 @@ body
 {
     flex:0 1 100px;
     margin-right:5px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+.booking-logo:hover
+{
+    opacity: 1;
 }
 
 /* Slideshow */
