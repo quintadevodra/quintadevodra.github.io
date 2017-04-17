@@ -216,14 +216,16 @@ body
 {
     flex-flow: column nowrap;
     padding:10px;
-    margin:10px;
     border: 1px solid #ddd;
     background-color: #fff;
-    /*box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);*/
+}
+.booking-card:not(:last-child)
+{
+    margin:0 0 10px 0;
 }
 .booking-card:hover
 {
-    /*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.3);*/
+
 }
 .booking-card > div
 {
@@ -261,7 +263,7 @@ body
 .booking-logo
 {
     flex:0 1 100px;
-    margin:5px;
+    margin-right:5px;
 }
 
 /* Slideshow */
@@ -462,7 +464,7 @@ body
     }
     .booking-card:not(:last-child)
     {
-        margin-right:20px;
+        margin:0 20px 0 0;
     }
 
     /* Footer */
