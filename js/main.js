@@ -16,17 +16,34 @@ window.onload = function ()
 }; 
 
 // Slideshow.
-document.onkeydown = function(e) 
+var xDown = null;                                                        
+function slideShowOnTouchStart (evt) 
+{             
+    xDown = evt.touches[0].clientX;                                      
+}                                            
+function slideShowOnTouchMove (evt) 
 {
-    e = e || window.event;
-    if (e.keyCode == '37')  prevSlide()
-    else if (e.keyCode == '39')  nextSlide();
-    else if (e.keyCode == '27')  closeSlideShow();
+    if (!xDown) return;
+    var xUp = evt.touches[0].clientX;     
+    var xDiff = xDown - xUp;
+    if ( xDiff > 0 ) nextSlide();
+    else  prevSlide();
+    xDown = null;
+}
+function slideShowOnKeyDown (evt)
+{
+    evt = evt || window.event;
+    if (evt.keyCode == '37')  prevSlide()
+    else if (evt.keyCode == '39')  nextSlide();
+    else if (evt.keyCode == '27')  closeSlideShow();
 }
 function openSlideShow(src)
 {
-    document.querySelector('.slideshow-next').focus();
+    on(document, 'keydown', slideShowOnKeyDown);
+    on(document, 'touchstart', slideShowOnTouchStart);
+    on(document, 'touchmove', slideShowOnTouchMove);
 
+    document.querySelector('.slideshow-next').focus();
     addClass(document.body, 'slideshow-hide-scrollbars');
     var slideshow = document.querySelector('.slideshow');
     if (src !== undefined)
@@ -40,6 +57,10 @@ function openSlideShow(src)
 }
 function closeSlideShow()
 {
+    off(document, 'keydown', slideShowOnKeyDown);
+    off(document, 'touchstart', slideShowOnTouchStart);
+    off(document, 'touchmove', slideShowOnTouchMove);
+
     removeClass(document.body, 'slideshow-hide-scrollbars');
     var slideshow = document.querySelector('.slideshow');
     removeClass(slideshow, 'slideshow-active');
@@ -116,3 +137,12 @@ function on(element, types, listener)
         element.addEventListener(type, listener);
     }
 }
+function off(element, types, listener)
+{
+    var arrTypes = types.split(' ');
+    for (var i = 0; i < arrTypes.length; i++)  
+    {
+        var type = arrTypes[i].trim();
+        element.removeEventListener(type, listener);
+    }
+};
