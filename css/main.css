@@ -513,7 +513,9 @@ a:hover
     {
         margin:0 20px 0 0;
     }
-
+}
+@media all and (min-width: 1024px) /* Laptop - 1024px and larger */
+{
     /* Footer */
     .section-footer
     {   
@@ -524,10 +526,6 @@ a:hover
     {
         margin:0px 10px;
     }
-}
-@media all and (min-width: 1024px) /* Laptop - 1024px and larger */
-{
-
 }
 @media all and (min-width: 1440px) /* Laptop L - 1440px and larger  */
 {
