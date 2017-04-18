@@ -185,7 +185,6 @@ a:hover
 .section-footer
 {   
     margin:10px;
-    font-size:12px;
     flex-flow: column nowrap;
     justify-content:center;
     align-items:center;
