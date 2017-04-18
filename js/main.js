@@ -37,6 +37,47 @@ function slideShowOnKeyDown (evt)
     else if (evt.keyCode == '39')  nextSlide();
     else if (evt.keyCode == '27')  closeSlideShow();
 }
+function buildSlideShow()
+{
+    var strHtml = '<div class="slideshow-slides">';
+
+    [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
+    {
+        var slideShowIcon = document.createElement('div');
+        addClass(slideShowIcon, 'slide-show-icon')
+        elt.appendChild(slideShowIcon);
+
+        var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+        var title = elt.getAttribute('title');
+
+        if (index === 0) strHtml += '<div class="slideshow-slide slideshow-slide-active">';
+        else strHtml += '<div class="slideshow-slide">';
+
+            strHtml += '<div class="slideshow-img flex-box" onclick="nextSlide()">';
+                strHtml += '<img src="'+src+'" alt="'+title+'" />';
+            strHtml += '</div>';
+            strHtml += '<div class="slideshow-text">'+title+'</div>';
+        strHtml += '</div>';
+
+        // Add click to open slideshow.
+        (function (_src) {
+            on(elt, 'click', function(e)
+            {
+                openSlideShow(_src);
+            });
+        })(src);
+    });
+
+    strHtml += '</div>'
+    strHtml += '<div class="slideshow-prev flex-box" role="button" tabindex="0" onclick="prevSlide()">&#10094;</div>';
+    strHtml += '<div class="slideshow-next flex-box" role="button" tabindex="0" onclick="nextSlide()">&#10095;</div>';
+    strHtml += '<div class="slideshow-close flex-box" role="button" tabindex="0" onclick="closeSlideShow()">&times;</div>';
+
+    var slideshow = document.createElement('div');
+    addClass(slideshow, 'slideshow no-select')
+    slideshow.innerHTML = strHtml; 
+    document.querySelector('body').appendChild(slideshow);
+}
 function openSlideShow(src)
 {
     on(document, 'keydown', slideShowOnKeyDown);
@@ -80,47 +121,6 @@ function prevSlide()
     var prevSlide = (activeSlide.previousElementSibling !== null ? activeSlide.previousElementSibling : activeSlide.parentNode.lastElementChild);
     addClass(prevSlide, 'slideshow-slide-active');
     removeClass(activeSlide, 'slideshow-slide-active');
-}
-function buildSlideShow()
-{
-    var strHtml = '<div class="slideshow-slides">';
-
-    [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
-    {
-        var slideShowIcon = document.createElement('div');
-        addClass(slideShowIcon, 'slide-show-icon')
-        elt.appendChild(slideShowIcon);
-
-        var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
-        var title = elt.getAttribute('title');
-
-        if (index === 0) strHtml += '<div class="slideshow-slide slideshow-slide-active">';
-        else strHtml += '<div class="slideshow-slide">';
-
-            strHtml += '<div class="slideshow-img flex-box" onclick="nextSlide()">';
-                strHtml += '<img src="'+src+'" alt="'+title+'" />';
-            strHtml += '</div>';
-            strHtml += '<div class="slideshow-text">'+title+'</div>';
-        strHtml += '</div>';
-
-        // Add click to open slideshow.
-        (function (_src) {
-            on(elt, 'click', function(e)
-            {
-                openSlideShow(_src);
-            });
-        })(src);
-    });
-
-    strHtml += '</div>'
-    strHtml += '<div class="slideshow-prev flex-box" role="button" tabindex="0" onclick="prevSlide()">&#10094;</div>';
-    strHtml += '<div class="slideshow-next flex-box" role="button" tabindex="0" onclick="nextSlide()">&#10095;</div>';
-    strHtml += '<div class="slideshow-close flex-box" role="button" tabindex="0" onclick="closeSlideShow()">&times;</div>';
-
-    var slideshow = document.createElement('div');
-    addClass(slideshow, 'slideshow no-select')
-    slideshow.innerHTML = strHtml; 
-    document.querySelector('body').appendChild(slideshow);
 }
 
 // Util functions.

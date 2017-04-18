@@ -286,12 +286,12 @@ a:hover
 /* Slideshow */
 .slide
 {
-    cursor:pointer;
+    cursor:zoom-in;
 }
 .slide-show-icon
 {
     text-align:center;
-    width:3rem;;
+    width:3rem;
     line-height:3rem;;
     font-size:1.5rem;
     color:#fff;
@@ -302,7 +302,7 @@ a:hover
 }
 .slide-show-icon:before 
 {
-    content: '\01F50E';
+    content: '\01F50D';
 }
 .slide:hover .slide-show-icon
 {
