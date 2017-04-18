@@ -79,6 +79,7 @@ a:hover
 }
 .nav-link:hover
 {
+    color:#ff6000;
     text-decoration: underline;
 }
 .nav-icon
