@@ -289,29 +289,29 @@ a:hover
 {
     cursor:pointer;
 }
-.slide-max-icon
+.slide-show-icon
 {
     text-align:center;
     width:3rem;;
     line-height:3rem;;
     font-size:3rem;
     color:#fff;
-    background:#ff6000;
+    background:#000;
     float:right;
     opacity:0;
     transition: opacity 0.3s;
 }
-.slide-max-icon:before 
+.slide-show-icon:before 
 {
     content: '\00002b';
 }
-.slide:hover .slide-max-icon 
+.slide:hover .slide-show-icon
 {
     opacity:0.7;
 }
-.slide-max-icon :hover
+.slide-show-icon:hover
 {
-    background:#ff0000;
+    opacity:1;
 }
 .slideshow 
 {

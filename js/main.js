@@ -66,9 +66,9 @@ function buildSlideShow()
 
     [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
     {
-        var slideMaxIcon = document.createElement('div');
-        addClass(slideMaxIcon, 'slide-max-icon')
-        elt.appendChild(slideMaxIcon);
+        var slideShowIcon = document.createElement('div');
+        addClass(slideShowIcon, 'slide-show-icon')
+        elt.appendChild(slideShowIcon);
 
         var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
 
