@@ -286,6 +286,7 @@ a:hover
 /* Slideshow */
 .slide
 {
+    cursor:pointer;
     cursor:zoom-in;
 }
 .slide-show-icon
