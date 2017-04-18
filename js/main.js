@@ -66,6 +66,10 @@ function buildSlideShow()
 
     [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
     {
+        var slideMaxIcon = document.createElement('div');
+        addClass(slideMaxIcon, 'slide-max-icon')
+        elt.appendChild(slideMaxIcon);
+
         var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
 
         var title = elt.getAttribute('title');
