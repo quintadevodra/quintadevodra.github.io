@@ -92,12 +92,16 @@ function buildSlideShow()
         elt.appendChild(slideShowIcon);
 
         var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
-
         var title = elt.getAttribute('title');
-        if (index === 0)
-            strHtml += '<div class="slideshow-slide slideshow-slide-active"><div class="slideshow-img flex-box"><img src="'+src+'" alt="'+title+'" /></div><div class="slideshow-text">'+title+'</div></div>';
-        else
-            strHtml += '<div class="slideshow-slide"><div class="slideshow-img flex-box"><img src="'+src+'" alt="'+title+'" /></div><div class="slideshow-text">'+title+'</div></div>';
+
+        if (index === 0) strHtml += '<div class="slideshow-slide slideshow-slide-active">';
+        else strHtml += '<div class="slideshow-slide">';
+
+            strHtml += '<div class="slideshow-img flex-box" onclick="nextSlide()">';
+                strHtml += '<img src="'+src+'" alt="'+title+'" />';
+            strHtml += '</div>';
+            strHtml += '<div class="slideshow-text">'+title+'</div>';
+        strHtml += '</div>';
 
         // Add click to open slideshow.
         (function (_src) {
