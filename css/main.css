@@ -146,7 +146,7 @@ a:hover
     flex-flow: column nowrap;
     margin: 0 auto;
     max-width:1000px;
-    padding: 3rem 0; 
+    padding: 4rem 0; 
 }
 .section-content
 {
@@ -436,7 +436,7 @@ a:hover
     .section
     {
         flex-flow: row nowrap;
-        padding: 3rem 30px; 
+        padding: 6rem 30px; 
     }
     .section-info
     {
