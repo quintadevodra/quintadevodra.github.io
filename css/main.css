@@ -294,7 +294,7 @@ a:hover
     text-align:center;
     width:3rem;;
     line-height:3rem;;
-    font-size:3rem;
+    font-size:1.5rem;
     color:#fff;
     background:#000;
     float:right;
@@ -303,7 +303,7 @@ a:hover
 }
 .slide-show-icon:before 
 {
-    content: '\00002b';
+    content: '\01F50E';
 }
 .slide:hover .slide-show-icon
 {
