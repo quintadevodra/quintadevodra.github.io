@@ -97,7 +97,7 @@ a:hover
 {
     top: 0;
 }
-.nav-about
+.nav-find-us
 {
     display:none;
 }
@@ -492,7 +492,7 @@ a:hover
     }
 
     /* Nav */
-    .nav-about
+    .nav-find-us
     {
         display:flex;
     }
