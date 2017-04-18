@@ -25,6 +25,7 @@ document.onkeydown = function(e)
 }
 function openSlideShow(src)
 {
+    console.log(src);
     document.querySelector('.slideshow-next').focus();
 
     addClass(document.body, 'slideshow-hide-scrollbars');
