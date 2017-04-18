@@ -14,10 +14,13 @@ body
     font-size:1rem;
     color:#444;
     margin: 0 auto;
+    overflow-x: hidden;
 }
-.hide-scrollbars 
+
+/* Links */
+a
 {
-    overflow:hidden;
+    color:#ff6000;
 }
 
 /* Flexbox defaults */
@@ -367,6 +370,10 @@ body
 {
     font-size:4rem;
     right: 0;
+}
+.slideshow-hide-scrollbars 
+{
+    overflow:hidden;
 }
 
 /* Responsive Design - Default css styles are portrait first */

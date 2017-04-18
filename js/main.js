@@ -27,7 +27,7 @@ function openSlideShow(src)
 {
     document.querySelector('.slideshow-next').focus();
 
-    addClass(document.body, 'hide-scrollbars');
+    addClass(document.body, 'slideshow-hide-scrollbars');
     var slideshow = document.querySelector('.slideshow');
     if (src !== undefined)
     {
@@ -40,7 +40,7 @@ function openSlideShow(src)
 }
 function closeSlideShow()
 {
-    removeClass(document.body, 'hide-scrollbars');
+    removeClass(document.body, 'slideshow-hide-scrollbars');
     var slideshow = document.querySelector('.slideshow');
     removeClass(slideshow, 'slideshow-active');
 }
