@@ -43,6 +43,9 @@ function buildSlideShow()
 
     [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
     {
+        var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+        var title = elt.getAttribute('title');
+
         // Add click to open slideshow.
         (function (_src) {
             on(elt, 'click', function(e)
@@ -54,9 +57,6 @@ function buildSlideShow()
         var slideShowIcon = document.createElement('div');
         addClass(slideShowIcon, 'slide-show-icon')
         elt.appendChild(slideShowIcon);
-
-        var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
-        var title = elt.getAttribute('title');
 
         if (index === 0) 
             strHtml += '<div class="slideshow-slide slideshow-slide-active">';
