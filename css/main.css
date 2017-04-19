@@ -232,7 +232,6 @@ a:hover
 .booking-card
 {
     flex-flow: column nowrap;
-    padding:10px;
     background-color: #fff;
     border: 1px solid #ddd;
 }
@@ -242,11 +241,20 @@ a:hover
 }
 .booking-card > div
 {
-    margin:10px;
+    padding:1rem;
 }
 .booking-card > div:first-child
 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:2rem;
+    line-height:2rem;
+    color:#fff;
+    background-color: rgba(20,71,51,0.8);
     text-align:center;
+}
+.booking-card > div:nth-child(2)
+{
+    padding:0;
 }
 .booking-card > div:last-child
 {
