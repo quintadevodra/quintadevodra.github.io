@@ -87,21 +87,24 @@ function buildSlideShow()
 }
 function openSlideShow(src)
 {
-    on(document, 'keydown', slideShowOnKeyDown);
-    on(document, 'touchstart', slideShowOnTouchStart);
-    on(document, 'touchmove', slideShowOnTouchMove);
-
-    addClass(document.body, 'slideshow-hide-scrollbars');
     var slideshow = document.querySelector('.slideshow');
-    slideshow.querySelector('.slideshow-next').focus();
-    if (src !== undefined)
+    if (slideshow !== undefined)
     {
-        var activeSlide = slideshow.querySelector('.slideshow-slide-active');
-        var nextSlide = slideshow.querySelector('img[src="'+src+'"], img[data-src="'+src+'"]').parentElement.parentElement;
-        addClass(nextSlide, 'slideshow-slide-active');
-        removeClass(activeSlide, 'slideshow-slide-active');
+        on(document, 'keydown', slideShowOnKeyDown);
+        on(document, 'touchstart', slideShowOnTouchStart);
+        on(document, 'touchmove', slideShowOnTouchMove);
+
+        addClass(document.body, 'slideshow-hide-scrollbars');
+        slideshow.querySelector('.slideshow-next').focus();
+        if (src !== undefined)
+        {
+            var activeSlide = slideshow.querySelector('.slideshow-slide-active');
+            var nextSlide = slideshow.querySelector('img[src="'+src+'"], img[data-src="'+src+'"]').parentElement.parentElement;
+            addClass(nextSlide, 'slideshow-slide-active');
+            removeClass(activeSlide, 'slideshow-slide-active');
+        }
+        addClass(slideshow, 'slideshow-active');
     }
-    addClass(slideshow, 'slideshow-active');
 }
 function closeSlideShow()
 {
