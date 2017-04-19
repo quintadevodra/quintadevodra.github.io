@@ -43,9 +43,12 @@ function buildSlideShow()
 
     [].forEach.call(document.querySelectorAll('.slide'), function(elt, index) 
     {
-        var src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
-        var title = elt.getAttribute('title');
-
+        var src;
+        if (elt.nodeName == 'IMG') 
+            src = elt.getAttribute('src');
+        else     
+            src = window.getComputedStyle(elt).backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+       
         // Add click to open slideshow.
         (function (_src) {
             on(elt, 'click', function(e)
@@ -55,8 +58,10 @@ function buildSlideShow()
         })(src);
 
         var slideShowIcon = document.createElement('div');
-        addClass(slideShowIcon, 'slide-show-icon')
+        addClass(slideShowIcon, 'slideshow-icon')
         elt.appendChild(slideShowIcon);
+
+        var title = elt.getAttribute('title');
 
         if (index === 0) 
             strHtml += '<div class="slideshow-slide slideshow-slide-active">';
@@ -86,9 +91,9 @@ function openSlideShow(src)
     on(document, 'touchstart', slideShowOnTouchStart);
     on(document, 'touchmove', slideShowOnTouchMove);
 
-    document.querySelector('.slideshow-next').focus();
     addClass(document.body, 'slideshow-hide-scrollbars');
     var slideshow = document.querySelector('.slideshow');
+    slideshow.querySelector('.slideshow-next').focus();
     if (src !== undefined)
     {
         var activeSlide = slideshow.querySelector('.slideshow-slide-active');

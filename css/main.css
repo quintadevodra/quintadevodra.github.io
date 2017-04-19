@@ -301,7 +301,7 @@ a:hover
     cursor:pointer;
     cursor:zoom-in;
 }
-.slide-show-icon
+.slideshow-icon
 {
     text-align:center;
     width:3rem;
@@ -313,17 +313,13 @@ a:hover
     opacity:0;
     transition: opacity 0.3s;
 }
-.slide-show-icon:before 
+.slideshow-icon:before 
 {
     content: '\01F50D';
 }
-.slide:hover .slide-show-icon
+.slide:hover .slideshow-icon
 {
     opacity:0.7;
-}
-.slide-show-icon:hover
-{
-    opacity:1;
 }
 .slideshow 
 {
