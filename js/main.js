@@ -88,7 +88,7 @@ function buildSlideShow()
 function openSlideShow(src)
 {
     var slideshow = document.querySelector('.slideshow');
-    if (slideshow !== undefined)
+    if (slideshow !== null)
     {
         on(document, 'keydown', slideShowOnKeyDown);
         on(document, 'touchstart', slideShowOnTouchStart);
