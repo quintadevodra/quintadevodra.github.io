@@ -180,7 +180,7 @@ a:hover
 }
 .main > section:last-child > .section
 {
-    padding: 0;
+    padding: 1rem 0;
 }
 .section-footer
 {   
@@ -188,6 +188,10 @@ a:hover
     flex-flow: column nowrap;
     justify-content:center;
     align-items:center;
+}
+.section-footer > div
+{   
+    text-align:center;
 }
 .share-icon
 {
@@ -437,7 +441,7 @@ a:hover
     .section
     {
         flex-flow: row nowrap;
-        padding: 6rem 30px; 
+        padding: 6rem 0; 
     }
     .section-info
     {
@@ -462,10 +466,6 @@ a:hover
     .section-images > div > div
     {
         margin:3px;
-    }
-    .main > section:last-child > .section
-    {
-        padding: 0 30px;
     }
 }
 
