@@ -139,7 +139,7 @@ a:hover
 /* Sections */
 .main > section:nth-child(odd)
 {
-    background-color: rgba(33, 130, 3, 0.06);
+    background-color: #f9f9f9;
 }
 .section
 {
