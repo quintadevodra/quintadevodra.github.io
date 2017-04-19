@@ -139,7 +139,7 @@ a:hover
 /* Sections */
 .main > section:nth-child(odd)
 {
-    background-color: #f9f9f9;
+    background-color: rgba(33, 130, 3, 0.06);
 }
 .section
 {
@@ -273,7 +273,7 @@ a:hover
 }
 .booking-logo
 {
-    flex:0 1 100px;
+    flex:0 1 75px;
     margin-right:5px;
     opacity: 0.8;
     transition: opacity 0.3s;
