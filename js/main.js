@@ -61,7 +61,7 @@ function buildSlideShow()
         addClass(slideShowIcon, 'slideshow-icon')
         elt.appendChild(slideShowIcon);
 
-        var title = elt.getAttribute('title');
+        var title = elt.getAttribute('data-title');
 
         if (index === 0) 
             strHtml += '<div class="slideshow-slide slideshow-slide-active">';
