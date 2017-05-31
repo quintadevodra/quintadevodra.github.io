@@ -233,7 +233,7 @@ a:hover
 {
     flex-flow: column nowrap;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
 }
 .booking-card:not(:last-child)
 {
