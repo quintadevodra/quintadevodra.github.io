@@ -182,6 +182,7 @@ a:hover
 {
     padding: 1rem 0;
 }
+
 .section-footer
 {   
     margin:10px;
@@ -203,6 +204,25 @@ a:hover
 .share-icon:hover
 {
     opacity: 1;
+}
+
+/* Social */
+.section-social
+{   
+    flex-flow: column nowrap;
+}
+.section-social > div
+{   
+    margin: 20px 0px;
+    flex-flow: column nowrap;
+    flex:1;
+}
+.section-social > div > div
+{   
+    text-align:center;
+    margin: 10px 0px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Centered background images */
@@ -529,6 +549,12 @@ a:hover
     .share-icon
     {
         margin:0px 10px;
+    }
+
+    /* Social */
+    .section-social
+    {   
+        flex-flow: row nowrap;
     }
 }
 @media all and (min-width: 1440px) /* Laptop L - 1440px and larger  */
