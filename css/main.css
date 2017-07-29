@@ -242,7 +242,6 @@ a:hover
 .ratio-4-3 {padding-bottom:75%;}
 .ratio-1-1 {padding-bottom:100%;}
 
-
 /* Booking */
 .booking-cards
 {
@@ -255,32 +254,25 @@ a:hover
     background-color: #fff;
     border: 1px solid #eee;
 }
-.booking-card:not(:last-child)
+.booking-card-title
 {
-    margin:0 0 10px 0;
-}
-.booking-card > div
-{
-    padding:1rem;
-}
-.booking-card > div:first-child
-{
+    align-items:center;
+    justify-content: center;
+    flex:0 0 4rem;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:2rem;
-    line-height:2rem;
     color:#fff;
     background-color: rgba(20,71,51,0.8);
-    text-align:center;
 }
-.booking-card > div:nth-child(2)
+.booking-card-content
 {
-    padding:0;
+    flex:1;
+    flex-flow: column nowrap;
+    justify-content:space-between;
 }
-.booking-card > div:last-child
+.booking-card-content > div
 {
-    flex: 1 1 auto;*/ /* Fixes text overflow bug in IE11 */ 
-    justify-content:center;
-    align-items:flex-end;
+    padding:1rem;
 }
 .booking-card-price
 {
@@ -288,20 +280,6 @@ a:hover
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:4rem;
     line-height:4rem;
-}
-.booking-card-btn
-{
-    color:#fff;
-    background-color: rgba(20,71,51,0.8);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 2px;
-    transition: background-color 0.3s;
-}
-.booking-card-btn:hover
-{
-    color:#fff;
-    background-color: rgba(20,71,51,1);
 }
 .booking-logo
 {
