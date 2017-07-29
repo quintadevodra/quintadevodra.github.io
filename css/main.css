@@ -278,7 +278,7 @@ a:hover
 }
 .booking-card > div:last-child
 {
-    flex: 1 1 auto; /* Fixes text overflow bug in IE11 */ 
+    flex: 1 1 auto;*/ /* Fixes text overflow bug in IE11 */ 
     justify-content:center;
     align-items:flex-end;
 }
