@@ -254,6 +254,10 @@ a:hover
     background-color: #fff;
     border: 1px solid #eee;
 }
+.booking-card:not(:last-child)
+{
+    margin:0 0 10px 0;
+}
 .booking-card-title
 {
     align-items:center;
