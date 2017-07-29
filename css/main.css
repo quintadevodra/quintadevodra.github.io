@@ -183,6 +183,7 @@ a:hover
     padding: 1rem 0;
 }
 
+/* Footer */
 .section-footer
 {   
     margin:10px;
@@ -209,6 +210,7 @@ a:hover
 /* Social */
 .section-social
 {   
+    margin:10px;
     flex-flow: column nowrap;
 }
 .section-social > div
