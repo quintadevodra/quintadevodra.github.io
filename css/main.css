@@ -215,9 +215,12 @@ a:hover
 }
 .section-social > div
 {   
-    margin: 20px 0px;
     flex-flow: column nowrap;
     flex:1;
+}
+.section-social > div:not(:last-child)
+{
+    margin:0 0 10px 0;
 }
 .section-social > div > div
 {   
@@ -521,6 +524,12 @@ a:hover
     {
         margin:0 20px 0 0;
     }
+
+    /* Social */
+    .section-social
+    {   
+        flex-flow: row nowrap;
+    }
 }
 @media all and (min-width: 1024px) /* Laptop - 1024px and larger */
 {
@@ -533,12 +542,6 @@ a:hover
     .share-icon
     {
         margin:0px 10px;
-    }
-
-    /* Social */
-    .section-social
-    {   
-        flex-flow: row nowrap;
     }
 }
 @media all and (min-width: 1440px) /* Laptop L - 1440px and larger  */
