@@ -290,6 +290,10 @@ a:hover
     font-size:4rem;
     line-height:4rem;
 }
+.booking-card-img
+{
+    margin:0 10px 0 0;
+}
 .booking-logo
 {
     flex:0 1 75px;
