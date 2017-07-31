@@ -13,7 +13,32 @@ else
 window.onload = function () 
 { 
     buildSlideShow();
+    initModals();
 }; 
+
+// Modals.                                                                                                                               
+function initModals () 
+{             
+    [].forEach.call(document.querySelectorAll('.modal'), function(elt, index) 
+    {
+        on(elt, 'click', function(e)
+        {
+            if (e.target.className === 'modal' || e.target.className === 'modal-close' )  closeModals();
+        });
+    });
+}                                                                                                                                                                                  
+function closeModals () 
+{   
+    [].forEach.call(document.querySelectorAll('.modal'), function(elt, index) 
+    {
+        elt.style.display = 'none';
+    }); 
+}                                           
+function showModal (id) 
+{          
+    var modal = document.getElementById(id); 
+    modal.style.display = 'block';   
+}                                         
 
 // Slideshow.
 var xDown = null;                                                        
@@ -134,29 +159,29 @@ function prevSlide()
 }
 
 // Util functions.
-function addClass (element, className)
+function addClass (elt, className)
 {
-    element.className += ' ' + className;
+    elt.className += ' ' + className;
 }
-function removeClass (element, className)
+function removeClass (elt, className)
 {
-    element.className = element.className.replace(new RegExp('(?:^|\\s)'+ className + '(?:\\s|$)'), ' ');
+    elt.className = elt.className.replace(new RegExp('(?:^|\\s)'+ className + '(?:\\s|$)'), ' ');
 }
-function on(element, types, listener)
+function on(elt, types, listener)
 {
     var arrTypes = types.split(' ');
     for (var i = 0; i < arrTypes.length; i++)  
     {
         var type = arrTypes[i].trim();
-        element.addEventListener(type, listener);
+        elt.addEventListener(type, listener);
     }
 }
-function off(element, types, listener)
+function off(elt, types, listener)
 {
     var arrTypes = types.split(' ');
     for (var i = 0; i < arrTypes.length; i++)  
     {
         var type = arrTypes[i].trim();
-        element.removeEventListener(type, listener);
+        elt.removeEventListener(type, listener);
     }
-};
+}
