@@ -427,6 +427,11 @@ a:hover
 }
 
 /* Modal */
+@keyframes animatetop 
+{
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
 .modal 
 {
     display: none;
@@ -440,22 +445,15 @@ a:hover
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
 }
-@keyframes animatetop 
-{
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
 .modal-content 
 {
     position: relative;
-    background-color: #fefefe;
+    background-color: #fff;
     margin: auto;
-    padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    border-radius:5px;
+    max-width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
 }
@@ -476,12 +474,27 @@ a:hover
 .modal-header 
 {
     line-height:3rem;
+    height:3rem;
     padding: 0px 20px;
 }
 .modal-body 
 {
     line-height:1.8rem;
-    padding: 20px;
+}
+.modal-airbnb
+{
+    flex-flow: column nowrap;
+    align-items:center;
+    padding: 0 0 10px 0;
+}
+.modal-airbnb > div 
+{
+    text-align:center;
+    padding: 10px;
+}
+.modal-airbnb-logo
+{
+    width:50px;
 }
 
 /* Responsive Design - Default css styles are portrait first */
