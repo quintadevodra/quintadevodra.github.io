@@ -9,6 +9,8 @@ else
    window.location = './basic/index.html';
 }
 
+var transitionEvent = whichTransitionEvent();
+
 // Called when page has loaded.
 window.onload = function () 
 { 
@@ -64,6 +66,12 @@ function slideShowOnKeyDown (evt)
     else if (evt.keyCode == '39')  nextSlide();
     else if (evt.keyCode == '27')  closeSlideShow();
 }
+function slideShowOnClose (evt)
+{
+    var slideshow = document.querySelector('.slideshow');
+    addClass(slideshow, 'slideshow-hidden');
+    removeClass(document.body, 'hide-scrollbars');
+}
 function buildSlideShow()
 {
     var strHtml = '<div class="slideshow-slides">';
@@ -108,7 +116,7 @@ function buildSlideShow()
     strHtml += '<div class="slideshow-close flex-box" role="button" tabindex="0" onclick="closeSlideShow()">&times;</div>';
 
     var slideshow = document.createElement('div');
-    addClass(slideshow, 'slideshow no-select')
+    addClass(slideshow, 'slideshow slideshow-hidden no-select')
     slideshow.innerHTML = strHtml; 
     document.querySelector('body').appendChild(slideshow);
 }
@@ -117,6 +125,7 @@ function openSlideShow(src)
     var slideshow = document.querySelector('.slideshow');
     if (slideshow !== null)
     {
+        off(slideshow, transitionEvent, slideShowOnClose);
         on(document, 'keydown', slideShowOnKeyDown);
         on(document, 'touchstart', slideShowOnTouchStart);
         on(document, 'touchmove', slideShowOnTouchMove);
@@ -130,17 +139,19 @@ function openSlideShow(src)
             addClass(nextSlide, 'slideshow-slide-active');
             removeClass(activeSlide, 'slideshow-slide-active');
         }
+        removeClass(slideshow, 'slideshow-hidden');
         addClass(slideshow, 'slideshow-active');
     }
 }
 function closeSlideShow()
 {
+    var slideshow = document.querySelector('.slideshow');
+
+    on(slideshow, transitionEvent, slideShowOnClose);
     off(document, 'keydown', slideShowOnKeyDown);
     off(document, 'touchstart', slideShowOnTouchStart);
     off(document, 'touchmove', slideShowOnTouchMove);
 
-    removeClass(document.body, 'hide-scrollbars');
-    var slideshow = document.querySelector('.slideshow');
     removeClass(slideshow, 'slideshow-active');
 }
 function nextSlide()
@@ -185,5 +196,23 @@ function off(elt, types, listener)
     {
         var type = arrTypes[i].trim();
         elt.removeEventListener(type, listener);
+    }
+}
+function whichTransitionEvent()
+{
+    var el = document.createElement('fakeelement');
+    var transitions = 
+    {
+        'transition':'transitionend',
+        'OTransition':'oTransitionEnd',
+        'MozTransition':'transitionend',
+        'WebkitTransition':'webkitTransitionEnd'
+    }
+    for (var t in transitions)
+    {
+        if(el.style[t] !== undefined)
+        {
+            return transitions[t];
+        }
     }
 }

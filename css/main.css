@@ -259,6 +259,10 @@ a:hover
     background-color: #fff;
     border: 1px solid #eee;
 }
+.booking-card > div:last-child
+{
+    flex: 1 1 auto; /* Fixes text overflow bug in IE11 */ 
+}
 .booking-card:not(:last-child)
 {
     margin:0 0 10px 0;
@@ -334,8 +338,6 @@ a:hover
 }
 .slideshow 
 {
-    visibility: hidden;
-    z-index: -1;
     opacity: 0;
     position: fixed;
     top: 0; 
@@ -345,8 +347,13 @@ a:hover
     background: rgba(0, 0, 0, 0.9);
     transition: opacity 0.3s;
 }
-.slideshow-active
+.slideshow-hidden
 {
+    z-index: -1;
+    visibility: hidden;
+}
+.slideshow-active
+{    
     z-index: 2000;
     visibility: visible;
     opacity: 1;
