@@ -16,7 +16,7 @@ window.onload = function ()
 { 
     buildSlideShow();
     initModals();
-}; 
+};
 
 // Modals.                                                                                                                               
 function initModals () 
