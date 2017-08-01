@@ -30,7 +30,7 @@ function initModals ()
         });
     });
 }      
-function modalOnClose (evt)
+function onModalClose (evt)
 {
     if (hasClass(evt.target, 'modal'))
     {
@@ -42,7 +42,7 @@ function closeModals ()
 {   
     [].forEach.call(document.querySelectorAll('.modal'), function(elt, index) 
     {
-        on(elt, transitionEvent, modalOnClose);
+        on(elt, transitionEvent, onModalClose);
         removeClass(elt, 'modal-active');
         removeClass(elt.getElementsByClassName('modal-content')[0], 'modal-content-active');
     }); 
@@ -50,7 +50,7 @@ function closeModals ()
 function showModal (id) 
 {         
     var modal = document.getElementById(id); 
-    off(modal, transitionEvent, modalOnClose);
+    off(modal, transitionEvent, onModalClose);
     addClass(document.body, 'hide-scrollbars');
     removeClass(modal, 'modal-hidden');
     addClass(modal, 'modal-active'); 
