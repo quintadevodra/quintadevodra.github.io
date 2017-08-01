@@ -29,6 +29,7 @@ function initModals ()
 }                                                                                                                                                                                  
 function closeModals () 
 {   
+    removeClass(document.body, 'hide-scrollbars');
     [].forEach.call(document.querySelectorAll('.modal'), function(elt, index) 
     {
         elt.style.display = 'none';
@@ -36,6 +37,7 @@ function closeModals ()
 }                                           
 function showModal (id) 
 {          
+    addClass(document.body, 'hide-scrollbars');
     var modal = document.getElementById(id); 
     modal.style.display = 'block';   
 }                                         
@@ -119,7 +121,7 @@ function openSlideShow(src)
         on(document, 'touchstart', slideShowOnTouchStart);
         on(document, 'touchmove', slideShowOnTouchMove);
 
-        addClass(document.body, 'slideshow-hide-scrollbars');
+        addClass(document.body, 'hide-scrollbars');
         slideshow.querySelector('.slideshow-next').focus();
         if (src !== undefined)
         {
@@ -137,7 +139,7 @@ function closeSlideShow()
     off(document, 'touchstart', slideShowOnTouchStart);
     off(document, 'touchmove', slideShowOnTouchMove);
 
-    removeClass(document.body, 'slideshow-hide-scrollbars');
+    removeClass(document.body, 'hide-scrollbars');
     var slideshow = document.querySelector('.slideshow');
     removeClass(slideshow, 'slideshow-active');
 }

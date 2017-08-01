@@ -421,13 +421,13 @@ a:hover
     font-size:4rem;
     right: 0;
 }
-.slideshow-hide-scrollbars 
+.hide-scrollbars 
 {
     overflow:hidden;
 }
 
 /* Modal */
-@keyframes animatetop 
+@keyframes modalFadeIn 
 {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
@@ -454,7 +454,7 @@ a:hover
     border-radius:5px;
     max-width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
+    animation-name: modalFadeIn;
     animation-duration: 0.4s
 }
 .modal-close 
