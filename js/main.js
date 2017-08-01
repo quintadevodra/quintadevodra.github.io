@@ -23,25 +23,38 @@ function initModals ()
 {             
     [].forEach.call(document.querySelectorAll('.modal'), function(elt, index) 
     {
-        on(elt, 'click', function(e)
+        addClass(elt, 'modal-hidden');
+        on(elt, 'click', function(evt)
         {
-            if (e.target.className === 'modal' || e.target.className === 'modal-close' )  closeModals();
+            if (hasClass(evt.target, 'modal') || hasClass(evt.target, 'modal-close'))  closeModals();
         });
     });
-}                                                                                                                                                                                  
+}      
+function modalOnClose (evt)
+{
+    if (hasClass(evt.target, 'modal'))
+    {
+        addClass(evt.target, 'modal-hidden');
+        removeClass(document.body, 'hide-scrollbars');
+    }
+}                                                                                                                                                                            
 function closeModals () 
 {   
-    removeClass(document.body, 'hide-scrollbars');
     [].forEach.call(document.querySelectorAll('.modal'), function(elt, index) 
     {
-        elt.style.display = 'none';
+        on(elt, transitionEvent, modalOnClose);
+        removeClass(elt, 'modal-active');
+        removeClass(elt.getElementsByClassName('modal-content')[0], 'modal-content-active');
     }); 
 }                                           
 function showModal (id) 
-{          
-    addClass(document.body, 'hide-scrollbars');
+{         
     var modal = document.getElementById(id); 
-    modal.style.display = 'block';   
+    off(modal, transitionEvent, modalOnClose);
+    addClass(document.body, 'hide-scrollbars');
+    removeClass(modal, 'modal-hidden');
+    addClass(modal, 'modal-active'); 
+    addClass(modal.getElementsByClassName('modal-content')[0], 'modal-content-active');
 }                                         
 
 // Slideshow.
@@ -68,8 +81,7 @@ function slideShowOnKeyDown (evt)
 }
 function slideShowOnClose (evt)
 {
-    var slideshow = document.querySelector('.slideshow');
-    addClass(slideshow, 'slideshow-hidden');
+    addClass(evt.target, 'slideshow-hidden');
     removeClass(document.body, 'hide-scrollbars');
 }
 function buildSlideShow()
@@ -179,6 +191,10 @@ function addClass (elt, className)
 function removeClass (elt, className)
 {
     elt.className = elt.className.replace(new RegExp('(?:^|\\s)'+ className + '(?:\\s|$)'), ' ');
+}
+function hasClass (elt, className)
+{
+    return (' ' + elt.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' ' + className + ' ') > -1;
 }
 function on(elt, types, listener)
 {

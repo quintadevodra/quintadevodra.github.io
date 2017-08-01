@@ -434,16 +434,10 @@ a:hover
 }
 
 /* Modal */
-@keyframes modalFadeIn 
-{
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
 .modal 
 {
-    display: none;
+    opacity:0;
     position: fixed;
-    z-index: 2000;
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -451,9 +445,22 @@ a:hover
     height: 100%; 
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+    transition: opacity 0.3s;
+}
+.modal-hidden
+{
+    z-index: -1;
+    visibility: hidden;
+}
+.modal-active
+{    
+    z-index: 2000;
+    visibility: visible;
+    opacity: 1;
 }
 .modal-content 
 {
+    top:-300px; 
     position: relative;
     background-color: #fff;
     margin: auto;
@@ -461,8 +468,11 @@ a:hover
     border-radius:5px;
     max-width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: modalFadeIn;
-    animation-duration: 0.4s
+    transition: top 0.3s;
+}
+.modal-content-active
+{    
+    top:0; 
 }
 .modal-close 
 {
