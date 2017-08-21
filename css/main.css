@@ -300,8 +300,8 @@ a:hover
 }
 .booking-logo
 {
-    flex:0 1 75px;
-    margin-right:5px;
+    flex:0 1 50px;
+    margin-right:0px;
     opacity: 0.8;
     transition: opacity 0.3s;
 }
