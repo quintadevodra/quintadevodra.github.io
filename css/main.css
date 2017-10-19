@@ -542,10 +542,6 @@ a:hover
     {
         flex-flow: row nowrap;
     }
-    .banner > div:nth-child(2)
-    {
-        /*flex:1;*/
-    }
     .banner > div:nth-child(1)
     {
         flex-flow: column nowrap;
