@@ -124,18 +124,29 @@ a:hover
 {
     flex:0.8;
 }
-.banner > div:nth-child(1) > div
-{
-    flex:1;
-}
 .banner > div:nth-child(2)
 {
-    flex-flow: column nowrap;
     flex:1.8;
 }
 .banner > div:nth-child(3)
 {
     flex:2;
+}
+.banner > div:nth-child(1) > div
+{
+    flex:1;
+}
+.banner > div:nth-child(2) > div:nth-child(1)
+{
+    flex:1;
+}
+.banner > div:nth-child(2) > div:nth-child(2)
+{
+    flex:2;
+}
+.banner > div:nth-child(2) > div:nth-child(3)
+{
+    flex:0;
 }
 .banner-logo
 {
@@ -144,14 +155,6 @@ a:hover
     background-position: 50% 50%;
     flex:1;
     margin:20px;
-}
-.banner > div:nth-child(2) > div:nth-child(1)
-{
-    flex:2;
-}
-.banner > div:nth-child(2) > div:nth-child(2)
-{
-    flex:0;
 }
 
 /* Sections */
@@ -546,7 +549,23 @@ a:hover
     {
         flex-flow: column nowrap;
     }
+    .banner > div:nth-child(1) > div:nth-child(2)
+    {
+        flex:1.5;
+    }
+    .banner > div:nth-child(2)
+    {
+        flex-flow: column nowrap;
+    }
+    .banner > div:nth-child(2) > div:nth-child(1)
+    {
+        flex:1;
+    }
     .banner > div:nth-child(2) > div:nth-child(2)
+    {
+        flex:1.5;
+    }
+    .banner > div:nth-child(2) > div:nth-child(3)
     {
         flex:1;
     }
