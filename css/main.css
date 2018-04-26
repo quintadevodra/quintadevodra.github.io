@@ -314,17 +314,17 @@ a:hover
 {
     background-color: #d5e8e1;
 }
-.booking-card-season
+.booking-card-subtitle-text
 {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:3rem;
+    font-size:2rem;
     line-height:3rem;
 }
 .booking-card-dates
 {
     font-family: verdana;
     font-size:0.7rem;
-    line-height:0.7rem;
+    line-height:1rem;
 }
 
 /* Slideshow */
