@@ -292,8 +292,8 @@ a:hover
 {
     color:#144733;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:4rem;
-    line-height:4rem;
+    font-size:3rem;
+    line-height:3rem;
 }
 .booking-card-img
 {
@@ -309,6 +309,22 @@ a:hover
 .booking-logo:hover
 {
     opacity: 1;
+}
+.booking-card-subtitle
+{
+    background-color: #d5e8e1;
+}
+.booking-card-season
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:3rem;
+    line-height:3rem;
+}
+.booking-card-dates
+{
+    font-family: verdana;
+    font-size:0.7rem;
+    line-height:0.7rem;
 }
 
 /* Slideshow */
