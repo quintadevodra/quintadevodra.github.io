@@ -282,11 +282,11 @@ a:hover
 {
     flex:1;
     flex-flow: column nowrap;
-    justify-content:space-between;
 }
 .booking-card-content > div
 {
     padding:1rem;
+    flex:1;
 }
 .booking-card-price
 {
@@ -309,10 +309,6 @@ a:hover
 .booking-logo:hover
 {
     opacity: 1;
-}
-.booking-card-subtitle
-{
-    background-color: #d5e8e1;
 }
 .booking-card-subtitle-text
 {
@@ -337,6 +333,14 @@ a:hover
 .booking-card-dates  > span:not(:first-child):before 
 { 
     content: "\00a0 "; 
+}
+.separator
+{
+    border-top:solid 1px #eee;
+}
+.high-season
+{
+    background-color: #e6f5ef;
 }
 
 /* Slideshow */
