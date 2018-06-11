@@ -326,6 +326,18 @@ a:hover
     font-size:0.7rem;
     line-height:1rem;
 }
+.booking-card-dates > span
+{
+    opacity:0.3;
+}
+.booking-card-dates  > span.in
+{
+    opacity:1;
+}
+.booking-card-dates  > span:not(:first-child):before 
+{ 
+    content: "\00a0 "; 
+}
 
 /* Slideshow */
 .slide
