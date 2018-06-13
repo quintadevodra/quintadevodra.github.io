@@ -321,18 +321,23 @@ a:hover
     font-family: verdana;
     font-size:0.7rem;
     line-height:1rem;
+    flex-flow: row wrap;
 }
-.booking-card-dates > span
+.booking-card-dates > div
 {
-    opacity:0.3;
+    padding: 2px 4px;
+    border-top: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    color: #ddd;
 }
-.booking-card-dates  > span.in
-{
-    opacity:1;
-}
-.booking-card-dates  > span:not(:first-child):before 
+.booking-card-dates  > div:first-child
 { 
-    content: "\00a0 "; 
+    border-left: solid 1px #ddd;
+}
+.booking-card-dates  > div.in
+{
+    color:#444;
 }
 .separator
 {
