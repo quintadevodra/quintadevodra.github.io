@@ -194,7 +194,20 @@ a:hover
 }
 .section-footer > div
 {   
+    padding:5px;
+    justify-content:center;
+    align-items:center;
     text-align:center;
+}
+.section-footer > div:first-child
+{ 
+    flex-flow: column nowrap;  
+
+}
+.section-footer > div:first-child > div
+{   
+    justify-content:center;
+    align-items:center;
 }
 .share-icon
 {
