@@ -179,12 +179,27 @@ a:hover
     margin:10px;
     line-height:1.8rem;
 }
+
+/* Footer */
+.section-footer a
+{
+    color:#fff;
+    text-decoration:none;
+}
+.section-footer a:hover
+{
+    color:#fff;
+    text-decoration:underline;
+}
+.main > section:last-child
+{
+    background-color: rgba(20,71,51,1);
+    color:#fff;
+}
 .main > section:last-child > .section
 {
     padding: 1rem 0;
 }
-
-/* Footer */
 .section-footer
 {   
     margin:10px;
