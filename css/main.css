@@ -241,6 +241,10 @@ a:hover {
 }
 
 /* Booking */
+.book-now {
+    text-align: center;
+    font-size: 2rem;
+}
 .booking-cards {
     margin: 20px 0px;
     flex-flow: column nowrap;
