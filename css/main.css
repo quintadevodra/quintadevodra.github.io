@@ -246,8 +246,8 @@ a:hover {
     font-size: 2rem;
 }
 .book-now-container {
-align-items: center;
-justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 .book-now-button {
     background-color: rgba(20, 71, 51, 1);
