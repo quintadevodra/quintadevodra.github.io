@@ -245,6 +245,10 @@ a:hover {
     text-align: center;
     font-size: 2rem;
 }
+.book-now-container {
+align-items: center;
+justify-content: center;
+}
 .book-now-button {
     background-color: #ff6000;
     color: white;
