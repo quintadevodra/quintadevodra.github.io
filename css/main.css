@@ -245,6 +245,15 @@ a:hover {
     text-align: center;
     font-size: 2rem;
 }
+.book-now-fixed {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ff6000;;
+    color: white;
+    text-align: center;
+  }
 .booking-cards {
     margin: 20px 0px;
     flex-flow: column nowrap;
