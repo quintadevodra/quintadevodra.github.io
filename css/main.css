@@ -245,12 +245,14 @@ a:hover {
     text-align: center;
     font-size: 2rem;
 }
-.bbook-now-nav-link {
+.book-now-nav-link {
     background-color: #ff6000;
+    opacity: 0.7;
     text-align: center;
     text-decoration: none;
 }
 .book-now-nav-link:hover {
+    opacity: 1;
     color: white;
 }
 .booking-cards {
