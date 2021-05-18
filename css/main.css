@@ -250,7 +250,7 @@ align-items: center;
 justify-content: center;
 }
 .book-now-button {
-    background-color: #ff6000;
+    background-color: rgba(20, 71, 51, 1);
     color: white;
     padding: 0.5rem;
     margin-right:2px;
