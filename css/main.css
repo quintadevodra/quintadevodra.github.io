@@ -252,12 +252,14 @@ a:hover {
 .book-now-button {
     background-color: rgba(20, 71, 51, 1);
     color: white;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     margin-right:2px;
+    opacity: 0.9;
     text-align: center;
     text-decoration: none;
 }
 .book-now-button:hover {
+    opacity: 1;
     color: white;
 }
 .booking-cards {
