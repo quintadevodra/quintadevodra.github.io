@@ -250,6 +250,7 @@ a:hover {
     justify-content: center;
 }
 .book-now-button {
+    border-radius: 3px;
     background-color: rgba(20, 71, 51, 1);
     color: white;
     padding: 0.5rem 1rem;
